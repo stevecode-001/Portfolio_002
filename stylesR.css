@@ -1,0 +1,524 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+#home{
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(catering.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.logo{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: 2px ridge red;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+nav{
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+}
+.links-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+nav a{
+  height: 100%;
+  padding: 0 15px;
+  align-items: center;
+  font-weight: 600;
+  display: flex;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  color: white;
+  transition: all .5s ease;
+}
+nav a:hover{
+  color: red;
+}
+svg{
+  fill: red;
+}
+#sidebar-active{
+  display: none;
+}
+.close-sidebar-button, .open-sidebar-button{
+  display: none;
+}
+@media(max-width: 650px){
+  .links-container{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 200px;
+    background-color: rgb(31, 30, 30);
+    box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+    transition: .75s ease-out;
+  }
+  nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .open-sidebar-button{
+    display: block;
+  }
+  .close-sidebar-button{
+    display: block;
+    padding: 10px 20px;
+  }
+  #sidebar-active:checked ~ .links-container{
+    right: 0;
+  }
+  .home h1{
+    font-size: 1;
+  }
+ 
+}
+.home{
+  height: 570px;
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.home h3{
+  font-size: 3vw;
+  font-weight: 200;
+  padding-bottom: 10px;
+  word-spacing: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.home span{
+  color: red;
+}
+.home h1{
+  font-size: 7vw;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  word-spacing: 20px;
+}
+.home p{
+  padding-bottom: 20px;
+}
+.home a{
+  color: white;
+  text-decoration: none;
+  border: 2px solid red;
+  padding: 8px;
+  transition: .75s;
+  border-radius: 3px;
+}
+.home a:hover{
+  background-color: red;
+  color: black;
+  font-weight: 300;
+}
+
+/*About*/
+
+.about-img{
+  height: 350px;
+  background-color: brown;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(download.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.about-text{
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about-text h1{
+  text-align: center;
+  color: bisque;
+  border-bottom: 3px solid red;
+  font-size: 40px;
+  text-shadow: -1px 0 rgb(54, 52, 52), 0 1px rgb(61, 60, 60), 1px 0 rgb(70, 67, 67), 0 -1px rgb(68, 64, 64);
+}
+.about-text2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding: 20px;
+  margin-top: 20px;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.about-text2 h3{
+  font-size: 30px;
+  color: red;
+}
+.about-text2 p{
+  font-size: 18px;
+  text-indent: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Servies*/
+
+.services-img{
+  height: 320px;
+  background-color: green;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(download\ \(2\).jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.services-div{
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services-div h1{
+  text-align: center;
+  color: bisque;
+  border-bottom: 3px solid red;
+  font-size: 40px;
+  text-shadow: -1px 0 rgb(54, 52, 52), 0 1px rgb(61, 60, 60), 1px 0 rgb(70, 67, 67), 0 -1px rgb(68, 64, 64);
+}
+.services{
+  height: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #8f6c6c;
+  width: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px,auto));
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+    
+}
+
+.our-service{
+  height: 350px;
+  background-color: rgb(212, 191, 212);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.our-service h2{
+  font-size: 25px;
+  padding-top: 10px;
+  font-weight: 540;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.our-service img{
+  width: 60%;
+  height: 200px;
+  border-radius: 60%;
+}
+.cta{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cta p{
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+.cta a{
+  color: rgb(212, 205, 205);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 7px;
+  background-color: red;
+}
+
+/* contact */
+
+.contact-img{
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(download.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px;
+}
+.contact-div{
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-div h1{
+  text-align: center;
+  color: bisque;
+  border-bottom: 3px solid red;
+  font-size: 40px;
+  text-shadow: -1px 0 rgb(54, 52, 52), 0 1px rgb(61, 60, 60), 1px 0 rgb(70, 67, 67), 0 -1px rgb(68, 64, 64);
+}
+.contact-container{
+  width: 100%;
+  margin-top: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.contact-logo{
+  background-color: #8b3030;
+  height: 500px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-image: url(download\ \(2\).jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.contact-form{
+  background-color: #8b30304b;
+  height: 500px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+form .inner-contact{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+input{
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+}
+input::placeholder{
+  padding-left: 5px;
+}
+textarea{
+  height: 80px;
+  border-radius: 10px;
+  border: none;
+}
+textarea::placeholder{
+  padding-left: 5px;
+  padding-top: 5px;
+}
+form button{
+  width: 200px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #8b3030;
+  color: white;
+  margin-top: 15px;
+}
+
+/*Testimony*/
+
+#testimony h1{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 4vw;
+  color: red;
+}
+.testimony-div{
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.testimony{
+  background-color: #8f6c6c;
+  box-sizing: border-box;
+  padding: 7px;
+  margin: 5px;
+  height: 150px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.test-img{
+  height: 100%;
+  width: 30%;
+  background-color: blue;
+  border-radius: 50%;
+}
+.test-img img{
+  border-radius: 50%;
+}
+.test-text{
+  height: 100%;
+  width: 60%;
+  padding: 5px;
+}
+.test-text h3{
+  padding-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.test-text p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#footer{
+  background-color: rgb(36, 34, 34);
+  height: auto;
+  margin-top: 40px;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer1{
+  width: 470px;
+  height: 150px;
+  margin: 5px;
+}
+.footer1 p{
+  font-size: 18px;
+}
+.footer1 i{
+  font-size: 30px;
+  margin-right: 10px;
+}
+.sci{
+  margin-top: 10px;
+}
+.footer2{
+  width: 470px;
+  height: 150px;
+  margin: 5px;
+}
+.footer2 p{
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+/* Menu*/
+
+#menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#menu h1{
+  text-align: center;
+  padding-top: 70px;
+  color: bisque;
+  border-bottom: 3px solid red;
+  font-size: 40px;
+  text-shadow: -1px 0 rgb(54, 52, 52), 0 1px rgb(61, 60, 60), 1px 0 rgb(70, 67, 67), 0 -1px rgb(68, 64, 64);
+}
+.appetizers{
+  height: auto;
+  width: 100%;
+  background-color: #8f6c6c;
+  margin-top: 40px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.appetizers h2{
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  text-align: center;
+}
+.appetizers-div{
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,250px));
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.appet{
+  height: 300px;
+
+}
+.appet h3{
+  padding-top: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.appet p{
+  padding-top: 5px;
+  font-size: 17px;
+}
+.appet span{
+  color: rgb(3, 207, 3);
+  font-size: 25px;
+  padding-top: 5px;
+  font-weight: 900;
+}
+.appet-img{
+  width: 100%;
+  height: 65%;
+  background-color: red;
+}
+
+
+
+

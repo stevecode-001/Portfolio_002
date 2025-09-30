@@ -1,0 +1,522 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  
+}
+#home{
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0.7), rgba(0,0,0,0.7)), url(blueperf.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+nav{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 1px;
+  background-color: rgb(59, 59, 59);
+}
+.navmenu{
+  display: flex;
+  list-style: none;
+}
+.logo{
+  text-decoration: none;
+  color: orange;
+  font-size: 30px;
+  font-weight: 400;
+}
+.navmenu a{
+  color: white;
+  font-size: 17px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all .42s ease;
+}
+.navmenu a:hover{
+  color: orange;
+}
+.nav-icon{
+  display: flex;
+  align-items: center;
+}
+.nav-icon a{
+  text-decoration: none;
+  color: white;
+  padding-right: 10px;
+}
+.nav-icon i{
+  font-size: 25px;
+}
+svg{
+  fill: white;
+}
+#sidebar-active{
+  display: none;
+  padding: 0 20px;
+}
+.close-sidebar-button{
+    display: none;
+    padding: 0 20px;
+}
+.open-sidebar-button{
+  display: none;
+}
+@media(max-width:650px){
+    .navmenu{
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 10px;
+      width: 200px;
+      height: 700px;
+      background-color: rgb(221, 146, 8);
+      box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+      transition: 0.55s ease-out;
+    }
+    .navmenu li{
+      padding: 20px 30px;
+    }
+    .navmenu a{
+      box-sizing: border-box;
+      height: auto;
+      width: 100%;
+    }
+    .close-sidebar-button{
+      display: block;
+      padding: 20px 30px;
+    }
+    .open-sidebar-button{
+      display: block;
+    }
+    #sidebar-active:checked ~ .navmenu{
+      right: 0;
+    }
+    .navmenu a:hover{
+      color: black;
+    }
+    
+  }
+  .home-text{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .home-text span{
+    color: orange;
+  }
+  .home-text p{
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  .home-text h1{
+    font-size: 7vw;
+    color: white;
+  }
+  .home-text a{
+    color: black;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: orange;
+    font-weight: bold;
+    transition: all .42s ease;
+  }
+  .home-text a:hover{
+    background-color: #cf9a36;
+  }
+  .collections{
+    background-color: black;
+    height: auto;
+    margin-top: 100px;
+    padding-bottom: 20px;
+  }
+  .collections h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 37px;
+    text-align: center;
+    padding: 15px 0;
+  }
+  .collections span{
+    color: orange;
+  }
+  .collection-div{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .men{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: violet;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(perfume1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px ridge orange;
+  }
+  .men h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .men p{
+    color: white;
+    padding-bottom: 20px;
+  }
+  .men a{
+    border-radius: 2p;
+    border: 2px ridge orange;
+    padding: 7px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: all .75s ease;
+  }
+  .men a:hover{
+    background-color: orange;
+    color: black;
+  }
+  .women{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: violet;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(perfume4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px ridge orange;
+  }
+  .women h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .women p{
+    color: white;
+    padding-bottom: 20px;
+  }
+  .women a{
+    border-radius: 2p;
+    border: 2px ridge orange;
+    padding: 7px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: all .75s ease;
+  }
+  .women a:hover{
+    background-color: orange;
+    color: black;
+  }
+  .vintage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: violet;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(front-view-fragrance-bottle-transparent-white-floor.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px ridge orange;
+  }
+  .vintage h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .vintage p{
+    color: white;
+    padding-bottom: 20px;
+  }
+  .vintage a{
+    border-radius: 2p;
+    border: 2px ridge orange;
+    padding: 7px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: all .75s ease;
+  }
+  .vintage a:hover{
+    background-color: orange;
+    color: black;
+  }
+
+  /* Men .html*/
+body{
+  background-color: hsl(0, 3%, 12%);
+}
+  
+.men-perfume{
+  width: 100%;
+  height: 150px;
+  margin-top: 6%;
+  background-position: center;
+  background-color: orange;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: transparent;
+  background-clip: text;
+}
+.men-perfume h1{
+  text-align: center;
+  padding-top: 30px;
+  font-size: 4em;
+}
+.men-perfume h3{
+  color: white;
+  font-size: 25px;
+  padding-left: 35px;
+}
+.men-perfume span{
+  color: orange;
+}
+.products{
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+.product{
+  height: 400px;
+}
+img{
+  width: 100%;
+  height: 320px;
+  transition: all .42s ease;
+  border-radius: 7px;
+}
+img:hover{
+transform: scale(0.9);
+}
+.price p{
+  color: green;
+  font-weight: 900;
+}
+.rating i{
+  color: orange;
+}
+.price span{
+  color: red;
+  padding-left: 220px;
+  font-size: 25px;
+}
+.price h3{
+  color: white;
+}
+
+/*footer*/
+
+.footer{
+  background-color: rgb(48, 46, 46);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  gap: 10px;
+}
+.footer1{
+  height: 200px;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+.footer1 i{
+  font-size: 30px;
+  margin-top: 5px;
+  color: white;
+}
+.footer1 span{
+  padding-left: 10px;
+  padding-top: -15;
+  color: white;
+}
+.footer2{
+  height: 200px;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-left: 40px;
+}
+.footer2 h3{
+  font-size: 25px;
+  padding-bottom: 10px;
+  color: white;
+}
+.footer p{
+  color: white;
+}
+.footer2 i{
+  font-size: 30px;
+  margin-right: 10px;
+  color: white;
+}
+.footer-icon{
+  margin-top: 15px;
+}
+
+/* About */
+
+.about-us{
+  margin-top: 70px;
+}
+.about-us h1{
+  font-size: 60px;
+  text-align: center;
+  color: orange;
+  letter-spacing: 10px;
+  word-spacing: 30px;
+  }
+.about-div{
+  height: auto;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  box-sizing: border-box;
+  padding: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-text{
+  height: 400px;
+  margin: 10px;
+  padding-left: 20px;
+}
+.about-text h2{
+  color: orange;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+.about-text p{
+  color: white;
+  padding-bottom: 20px;
+  font-size: 19px;
+}
+.about-text a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  background-color: orange;
+  border-radius: 20px;
+  font-weight: 700;
+}
+.about-logo{
+  background-color: aqua;
+  height: 400px;
+  margin: 10px;
+  background-image: url(perfume1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.25), 0 4px 6px rgba(0,0,0,0.25);
+}
+
+/* Contact */
+
+.contact-us{
+  margin-top: 70px;
+}
+.contact-us h1{
+  text-align: center;
+  font-size: 60px;
+  text-align: center;
+  color: orange;
+  letter-spacing: 10px;
+  word-spacing: 30px;
+}
+.contact-div{
+  height: auto;
+  margin-top: 30px;
+  box-sizing: border-box;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+}
+.contact-text{
+  height: 400px;
+  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 50px;
+}
+.contact-text h1{
+  font-size: 50px;
+  color: orange;
+  padding-bottom: 15px;
+}
+.contact-text h4{
+  font-size: 25px;
+  color: orange;
+  padding-bottom: 20px;
+}
+.contact-text p{
+  color: white;
+  font-size: 20px;
+}
+.contact-form{
+  height: 400px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+form{
+  padding: 20px;
+}
+label{
+  font-size: 20px;
+  color: white;
+}
+input{
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px ridge orange;
+}
+textarea{
+  width: 250px;
+  height: 55px;
+  border-radius: 5px;
+  border: 1px ridge orange;
+}
+button{
+  padding: 5px 10px;
+  margin-top: 15px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
